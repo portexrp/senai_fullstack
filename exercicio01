@@ -1,0 +1,34 @@
+
+const alunos = new Object();
+let c = 1;
+let continuar;
+
+for(c; c >= 1; c++){
+
+    alunos.name = prompt('Nome do Aluno');
+    alunos.height = prompt('Altura');
+    alunos.gender = prompt('Sexo');
+    alunos.age = prompt('Idade');
+    alunos.classRoom = prompt('Sala de Aula');
+
+    Object.entries(alunos).forEach(([key, value]) => {
+        console.log(`${key}, ${value}`)
+    });
+
+    alunos.classRoom = {math: prompt('Primeira nota de Matemática')};
+    let nota1 = parseFloat(alunos.classRoom.math)
+    console.log(`Nota um ${alunos.classRoom.math} Aluno ${alunos.name}` )
+
+    alunos.classRoom.math = prompt('Segunda nota de Matemática');
+    console.log(`Nota Dois ${alunos.classRoom.math} aluno ${alunos.name}` )
+    let nota2 = parseFloat(alunos.classRoom.math)
+    console.log(`Nota Final = ${(nota1+nota2) / 2} aluno ${alunos.name}`)
+    
+    continuar = window.confirm('Confirme para inserir o próximo aluno');
+    
+    if(!continuar){
+        c = -1
+    }
+
+    console.log('---------------------------------------------------------')
+}
