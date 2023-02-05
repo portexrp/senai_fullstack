@@ -14,11 +14,11 @@ for(c; c >= 1; c++){
         console.log(`${key}, ${value}`)
     });
 
-    studants.classRoom = {math: prompt('Primeira note de Matemática')};
+    studants.classRoom = {math: prompt('Primeira nota de Matemática')};
     let note1 = parseFloat(studants.classRoom.math)
     console.log(`Nota um ${studants.classRoom.math} Aluno ${studants.name}` )
 
-    studants.classRoom.math = prompt('Segunda note de Matemática');
+    studants.classRoom.math = prompt('Segunda nota de Matemática');
     console.log(`Nota Dois ${studants.classRoom.math} aluno ${studants.name}` )
     let note2 = parseFloat(studants.classRoom.math)
     console.log(`Nota Final = ${(note1+note2) / 2} aluno ${studants.name}`)
