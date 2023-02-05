@@ -1,4 +1,3 @@
-
 const studants = new Object();
 let c = 1;
 let newStudant;
@@ -17,12 +16,12 @@ for(c; c >= 1; c++){
 
     studants.classRoom = {math: prompt('Primeira note de Matemática')};
     let note1 = parseFloat(studants.classRoom.math)
-    console.log(`note um ${studants.classRoom.math} Aluno ${studants.name}` )
+    console.log(`Nota um ${studants.classRoom.math} Aluno ${studants.name}` )
 
     studants.classRoom.math = prompt('Segunda note de Matemática');
-    console.log(`note Dois ${studants.classRoom.math} aluno ${studants.name}` )
+    console.log(`Nota Dois ${studants.classRoom.math} aluno ${studants.name}` )
     let note2 = parseFloat(studants.classRoom.math)
-    console.log(`note Final = ${(note1+note2) / 2} aluno ${studants.name}`)
+    console.log(`Nota Final = ${(note1+note2) / 2} aluno ${studants.name}`)
     
     newStudant = window.confirm('Confirme para inserir o próximo aluno');
     
@@ -31,9 +30,4 @@ for(c; c >= 1; c++){
     }
 
     console.log('---------------------------------------------------------')
-
-
 }
-
-
-
