@@ -18,10 +18,22 @@ for(c; c >= 1; c++){
     let note1 = parseFloat(studants.classRoom.math)
     console.log(`Nota um ${studants.classRoom.math} Aluno ${studants.name}` )
 
+    
+
     studants.classRoom.math = prompt('Segunda nota de Matemática');
     console.log(`Nota Dois ${studants.classRoom.math} aluno ${studants.name}` )
     let note2 = parseFloat(studants.classRoom.math)
-    console.log(`Nota Final = ${(note1+note2) / 2} aluno ${studants.name}`)
+
+    function note(note1, note2) {
+        finalNote = ((note1+note2) / 2)
+        if( finalNote > 7){
+            return `Nota Final = ${(note1+note2) / 2} aluno ${studants.name} APROVADO`
+        }
+        else{
+            return `Nota Final = ${(note1+note2) / 2} aluno ${studants.name} REPROVADO`
+        }
+    }
+    console.log(note(note1,note2))
     
     newStudant = window.confirm('Confirme para inserir o próximo aluno');
     
