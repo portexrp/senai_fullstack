@@ -15,14 +15,14 @@ form.addEventListener('submit',event =>{
         login[val.name] = val.value         
         
 }) 
-if(login.email && login.password){
-    verifyStorage = {user: login.email, pass: login.password}
+if(login.email && login.name){
+    verifyStorage = {user: login.email, pass: login.nome, img: login.img}
         localStorage.setItem('access', JSON.stringify(verifyStorage));
         msg.innerText = 'Dados atualizados com sucesso'
         msg.hidden = false
 
 }else{
-    console.log('error')
+    console.log(login.name)
 
 }
         
@@ -35,12 +35,11 @@ if(login.email && login.password){
 
 document.getElementById('logoff').addEventListener('click',logoff =>{
     location = '../../index.html'
-   // msg.innerText= 'Desconectado com sucesso.'
-  //  msg.hidden = false 
+    msg.innerText= 'Desconectado com sucesso.'
+    msg.hidden = false 
     console.log('teste')
 })
     
-
 
 
 /*
