@@ -20,7 +20,7 @@ Object.entries(fields).forEach(([key, val])=>{
 })    
 
      if(login.email == userEmail && login.password == userPass){
-        location = '../../../login/index.html'
+        location = './login/index.html'
         console.log('logado!')
      }else{
          msg.hidden = false  

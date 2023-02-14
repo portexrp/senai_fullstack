@@ -1,5 +1,37 @@
 
 
+//edita os usuario
+
+let form = document.getElementById('form-login')
+let login = {};
+let msg = document.getElementById('error')
+
+form.addEventListener('submit',event =>{
+    event.preventDefault() 
+
+    let verifyStorage = {};
+    Object.entries(form).forEach(([key, val])=>{   
+
+        login[val.name] = val.value         
+        
+}) 
+if(login.email && login.password){
+    verifyStorage = {user: login.email, pass: login.password}
+        localStorage.setItem('access', JSON.stringify(verifyStorage));
+        msg.innerText = 'Dados atualizados com sucesso'
+        msg.hidden = false
+
+}else{
+    console.log('error')
+
+}
+        
+
+})
+
+
+
+
 
 document.getElementById('logoff').addEventListener('click',logoff =>{
     location = '../../index.html'
