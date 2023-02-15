@@ -4,38 +4,20 @@ let total
 let count = 2
 
 
-//aqui vai pegar o total da conta
+
 while(count){
    order = parseFloat(prompt('Digite o valor do produto ou cancele para informar finalizar'))
 if(order){    
 
     subtotal.push(order)
-    count = true
-    console.log(subtotal) 
+    count = true    
     
 }else{
-
-    count = false  
-    console.log('sub total do else '+subtotal)  
+    count = false      
 }
 }
 
-order = 0 //aqui vai pegar o troco
-/*
-subtotal.forEach((element, key) => {
-    console.log(element+' '+key)
-    total += parseFloat(element)
-    console.log('total '+total)
-});1
-
-
-
-for(c =0;c > subtotal.length -1;c++){
-    
-    total+= subtotal[c]
-    console.log(c)
-}
-*/
+order = 0 
 
 subtotal.reduce(
     (totalfinal, element,key) =>{
