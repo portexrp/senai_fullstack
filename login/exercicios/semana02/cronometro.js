@@ -7,11 +7,11 @@ document.getElementById('chron').addEventListener('click', chron => {
             timer.innerText = c++
         }else{
             alert('O tempo acabou')
-            clearInterval(chron)
+            clearInterval(cron)
         }        
     }    
-    
-    var chron = setInterval(teste, 1000)
+
+    var cron = setInterval(teste, 1000)
 
     }
 )
