@@ -100,7 +100,7 @@ const arrayUsers = (find) => {
     }
 }
 
-document.getElementById('search').addEventListener('click', (event)=>{
+document.getElementById('search').addEventListener('click', ()=>{
     findUser = document.getElementById('InputSearch').value    
     
     arrayUsers(findUser) 
