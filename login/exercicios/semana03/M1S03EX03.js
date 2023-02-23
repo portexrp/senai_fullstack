@@ -68,17 +68,22 @@ document.getElementById('edit').addEventListener('click', () => {
 
 function deleteTask(task) {
 
-    let edit    
+       
     let editChild = document.querySelectorAll('input[name="radioBtn"]');
     let removeDiv
-    console.log(editChild)
+    
     editChild.forEach(element => {
 
         if (element.checked) {
+
+            task = element.nextElementSibling.value
             
             edit = element.parentElement
             removeDiv = document.getElementById(edit.id)
             document.getElementById('task').removeChild(removeDiv)
+            find = document.getElementById('find')
+            find.innerText = `Tarefa ${task} removida com sucesso!`            
+            find.hidden = false
 
         }
 
