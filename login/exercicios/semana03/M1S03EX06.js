@@ -10,7 +10,16 @@ async function profile (){
         let cardProfile = document.getElementById('cardProfile')
         let since = dados?.created
         
-        document.body.style.background = "black"
+        document.body.style = 
+         `background-image: url(https://images5.alphacoders.com/876/876590.png);
+         background-position: center center; 
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          background-color: #464646; 
+
+          `
+
             cardProfile.innerHTML = `
             <img class="card-img-top" src="${dados?.image}" id="imgProfile">
             <div class="card-body">
