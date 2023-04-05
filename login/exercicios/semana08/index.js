@@ -4,6 +4,7 @@ const Equipamento = require('./src/models/equipamentos')
 connection.authenticate()
 connection.sync({alter: true})
 
+/* insert statement*/
 try {
     let insert = Equipamento.create({
         name: "Esteira",
@@ -17,6 +18,7 @@ try {
             .json({ mensagem: "Não conseguimos processar sua solicitação." })
 }
 
+/* update statement*/
 
 try {
     const updateEquipamento = await Equipamento.findByPk(request.params.id)
@@ -38,3 +40,21 @@ try {
         .status(404)
         .json({ mensagem: "Não conseguimos processar sua solicitação." })
 }
+
+
+/* delete statement*/
+try {
+
+    await Equipamento.destroy({
+        where: {
+            id: request.params.id
+        }
+    })
+
+    response.status(200).json({ message: 'deletado com sucesso' })
+   
+
+} catch (error) {
+    response.status(500).json({ message: 'Não conseguimos processar sua solicitação.' })
+}
+
