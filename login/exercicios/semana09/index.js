@@ -1,6 +1,7 @@
 const express = require('express');
 const connection = require('./src/database')
-const Place = require('./src/models/Places')
+const Place = require('./src/models/Places');
+const Places = require('./src/models/Places');
 const app = express()
 app.use(express.json());
 connection.authenticate()
@@ -44,21 +45,60 @@ app.get('/place', async (_request, response) => {
 
 app.delete('/place/:id', async (request, response) => {
 
-
-    const result = await Place.findByPk(request.params.id)
-    if (!result) {
-        response.status(400).json({
-        mensagem: "Id não localizado."
-    })}
-
-    await Place.destroy({
-        where: {
-            id: request.params.id
+    try {
+        const result = await Place.findByPk(request.params.id)
+        if (!result) {
+            return response.status(400).json({
+                mensagem: "Id não localizado."
+            })
         }
-    })
-    response.status(201).json({mensagem: "Excluido com sucesso."})
+
+        await Place.destroy({
+            where: {
+                id: request.params.id
+            }
+        })
+        return response.status(201).json({ mensagem: "Excluido com sucesso." })
+
+    } catch (error) {
+        return response.status(400).json({ mensagem: "Não foi possível processar sua solicitação." })
+    }
 
 })
+
+app.put('/place/:id', async (request, response) => {
+
+    try {
+        const result = await Place.findByPk(request.params.id)
+
+        if (!result) {
+            return response.status(400).json({
+                mensagem: "Id não localizado."
+            })
+        }
+
+        result.name = request.body.name || result.name
+        result.phone = request.body.phone || result.phone
+        result.openingHours = request.body.openingHours || result.openingHours
+        result.description = request.body.description || result.description
+        result.latitude = request.body.latitude || result.latitude
+        result.longitude = request.body.longitude || result.longitude
+
+        const updatePlace = await result.save()
+
+        return response.status(201).json({
+            mensagem: "dados atualizados com sucesso.",
+            resultado: updatePlace
+        })
+
+    } catch (error) {
+        return response.status(400).json({ mensagem: "Não foi possível processar sua solicitação." })
+    }
+
+
+
+})
+
 
 app.listen(3001)
 
