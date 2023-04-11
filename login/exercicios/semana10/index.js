@@ -99,6 +99,37 @@ app.put('/place/:id', async (request, response) => {
 
 })
 
+app.post('/users', async (request, response) => {
+
+    try {
+        const result = await Users.findOne({
+            where: {
+                username: request.body.username
+            }
+        })
+
+        if (result) {
+            return response.status(409).json({
+                mensagem: `Usuário ${result.username} já cadastrado.`
+            })
+        }
+
+        const user = {
+            name: request.body.name,
+            email: request.body.email,
+            username: request.body.username,
+            password: request.body.password
+        }
+
+        const newUser = await Users.create(user)
+
+        return response.status(201).json(newUser)
+
+
+    } catch (error) {
+        return response.status(400).json({ mensagem: "Não foi possível processar sua solicitação." })
+    }
+})
 
 app.listen(3001)
 
