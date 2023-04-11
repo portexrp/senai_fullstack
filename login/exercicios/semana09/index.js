@@ -1,18 +1,31 @@
 const express = require('express');
-//const connection = require('./src/database')
-//const Place = require('./src/models/Places')
+const connection = require('./src/database')
+const Place = require('./src/models/Places')
 const app = express()
 app.use(express.json());
+connection.authenticate()
+connection.sync({ alter: true })
 
-app.post('/place',  (request, response) => {
+app.post('/place', async (request, response) => {
     
-    const place = {
-        name: request.body.name,
-        phone: request.body.phone,
-        description: request.body.description,
-        latitude: request.body.latitude,
-        longitude: request.body.longitude
+    try {
+        const newPlace = {
+            name: request.body.name,
+            phone: request.body.phone,
+            description: request.body.description,
+            openingHours: request.body.openinghours,
+            latitude: request.body.latitude,
+            longitude: request.body.longitude
+        }
+    
+        await Place.create(newPlace)
+    
+        return response.status(200).json({mensagem: "Usuário cadastrado com sucesso!"})
+        
+    } catch (error) {
+        return response.status(400).json({mensagem: "Não foi possível processar sua solicitação."})
     }
+    
 
 })
 
