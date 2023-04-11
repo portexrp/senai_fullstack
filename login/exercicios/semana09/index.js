@@ -29,4 +29,14 @@ app.post('/place', async (request, response) => {
 
 })
 
+
+app.get('/place', async (_request, response)=>{
+
+    const allPlaces = await Place.findAll()
+    console.log(allPlaces)
+
+    response.status(201).json({allPlaces})
+
+})
+
 app.listen(3001)
