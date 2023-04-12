@@ -2,6 +2,9 @@ const express = require('express');
 const connection = require('./src/database')
 const Place = require('./src/models/places');
 const Users = require('./src/models/users');
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
+
 const app = express()
 app.use(express.json());
 connection.authenticate()
@@ -113,12 +116,12 @@ app.post('/users', async (request, response) => {
                 mensagem: `Usuário ${result.username} já cadastrado.`
             })
         }
-
+        const password = hash.bcrypt(request.body.password, 10)
         const user = {
             name: request.body.name,
             email: request.body.email,
             username: request.body.username,
-            password: request.body.password
+            password: password
         }
 
         const newUser = await Users.create(user)
@@ -129,6 +132,39 @@ app.post('/users', async (request, response) => {
     } catch (error) {
         return response.status(400).json({ mensagem: "Não foi possível processar sua solicitação." })
     }
+})
+
+
+
+app.post('/sessions', async (request, response)=>{
+
+    const result = await Users.findOne({
+        where: {
+            username: request.body.username
+        }
+    })
+
+    if(!result){
+        return response.status(409).json({
+            mensagem: "Credenciais incorretas"
+        })
+    }
+
+    const token = jwt.sign(
+        {
+            id: result.id
+        },
+            "private_key",
+        {
+            expiresIn: '30m'
+        })
+
+    return response.status(201).json({
+        name: result.name,
+        nickname: result.nickname,
+        token: token
+    })
+
 })
 
 app.listen(3001)
