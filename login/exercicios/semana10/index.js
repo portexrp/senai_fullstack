@@ -3,14 +3,15 @@ const connection = require('./src/database')
 const Place = require('./src/models/places');
 const Users = require('./src/models/users');
 const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+const validateToken = require('./src/middlewares/validateToken');
 
 const app = express()
 app.use(express.json());
 connection.authenticate()
 connection.sync({ alter: true })
 
-app.post('/place', async (request, response) => {
+app.post('/place', validateToken, async (request, response) => {
 
     try {
         const newPlace = {
@@ -34,7 +35,7 @@ app.post('/place', async (request, response) => {
 })
 
 
-app.get('/place', async (_request, response) => {
+app.get('/place', validateToken, async (_request, response) => {
 
     try {
         const allPlaces = await Place.findAll()
@@ -43,10 +44,9 @@ app.get('/place', async (_request, response) => {
     } catch (error) {
         return response.status(400).json({ mensagem: "Não foi possível processar sua solicitação." })
     }
-
 })
 
-app.delete('/place/:id', async (request, response) => {
+app.delete('/place/:id', validateToken, async (request, response) => {
 
     try {
         const result = await Place.findByPk(request.params.id)
@@ -69,7 +69,7 @@ app.delete('/place/:id', async (request, response) => {
 
 })
 
-app.put('/place/:id', async (request, response) => {
+app.put('/place/:id', validateToken, async (request, response) => {
 
     try {
         const result = await Place.findByPk(request.params.id)
