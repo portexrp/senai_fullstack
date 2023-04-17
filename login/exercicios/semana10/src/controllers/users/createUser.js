@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt')
+const Users = require('../../models/users')
 
 async function createUser (request, response) {
 
