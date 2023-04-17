@@ -12,7 +12,7 @@ const validateToken = (request, response, next)=>{
 
     
     const newToken = token.slice(7)
-    jwt.verify(newToken,'private_key', (error, conteudoDoToken)=>{
+    jwt.verify(newToken,process.env.TOKEN_KEY, (error, conteudoDoToken)=>{
         
         if(error){
             
@@ -28,7 +28,9 @@ const validateToken = (request, response, next)=>{
             }
             
         }else{
-            console.log('passei aqui')
+            
+            request.body.user_id = conteudoDoToken.id
+            
             next()
         }
     })

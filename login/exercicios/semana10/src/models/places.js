@@ -1,5 +1,6 @@
 const {Sequelize} = require('sequelize')
 const connection = require('../database')
+const Users = require('./users')
 
 const Places = connection.define('places',{
     id:{
@@ -28,10 +29,15 @@ const Places = connection.define('places',{
     longitude: {
         type: Sequelize.DOUBLE,
         allowNull: false
+    },
+
+    user_id: {
+        type: Sequelize.INTEGER
     }
 
 }
 
 )
 
+Places.belongsTo(Users)
 module.exports = Places
