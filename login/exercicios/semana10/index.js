@@ -19,7 +19,7 @@ connection.authenticate()
 connection.sync({ alter: true })
 
 app.post('/place', validateToken, createPlaces)
-app.get('/place',  listplaces)
+app.get('/place', validateToken, listplaces)
 app.delete('/place/:id', validateToken, deletePlaces)
 app.put('/place/:id', validateToken, updatePlace)
 
