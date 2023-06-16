@@ -1,0 +1,416 @@
+:root {
+    --black: #000;
+    --text-1: #fff;
+    --text-2: #b2b2b2;
+    --btn-background-color-1: #FBB803;
+    --btn-background-hover-1: #dda201;
+    --btn-color-1: #000;
+    --cor-0: #ffffff;
+    --cor-1: #f7f7f7;
+    --cor-2: #ededed;
+    --cor-3: #dedede;
+    --cor-4: #cccccc;
+    --cor-5: #b2b2b2;
+    --cor-6: #9c9c9c;
+    --cor-7: #717171;
+    --cor-8: #595959;
+    --cor-9: #404040;
+    --cor-10: #2e2e2e;
+    --cor-11: #111111;
+    --cor-12: #000000;
+    --cor-p1: #ffbb00;
+    --cor-p2: #e4a30b;
+    --cor-p3: #a66f00;
+    --cor-p4: #664400;
+    --cor-p5: #332200;
+    --font-1-xl: 600 2rem/1.25 "Poppins", sans-serif;
+    --font-2-xl: 500 2rem/1.25 "Roboto", sans-serif;
+    --font-1-xxl: 600 4rem/1.125 "Poppins", sans-serif;
+
+}
+
+* {
+    
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(var(--cor-11) 600px, var(--cor-1) 0px);    
+    
+    box-sizing: border-box !important;
+}
+
+nav {
+    background-color: var(--black);
+    padding-top: 26px !important;
+    padding-bottom: 20px !important;
+    
+}
+
+nav a {
+    color: var(--cor-1) !important;
+    font-weight: 600 !important;
+}
+
+nav ul {
+    margin-right: 80px;
+}
+
+nav img {
+    margin-left: 82px;
+}
+
+.top-page-left {
+    color: var(--cor-1);
+    background-color: var(--cor-11);
+    margin-left: 80px;
+}
+
+.top-page-left span {
+    color: var(--btn-background-color-1);
+}
+
+.top-page-left h6 {
+    margin-top: 75px;
+    color: var(--cor-5);
+    font-weight: 600;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    font-size: 1.425rem;
+}
+
+.top-page-left h1 {
+    font: 600 4rem/1.125 "Poppins", sans-serif;
+
+}
+
+.top-page-right {
+    display: flex;
+    justify-content: end;
+    padding-right: 100px;
+    background-color: var(--cor-11);
+}
+
+.top-page-right img {
+    width: 50px;
+    height: 50px;
+    margin-top: 80px;
+}
+
+.contact {
+    display: flex;
+    margin-left: 80px;
+    margin-top: 40px;
+
+}
+
+.lojasOnline {
+    background-color: var(--black);
+    max-width: 40%;
+    padding-top: 50px;
+    padding-left: 60px;
+    border-radius: 6px;
+    padding-bottom: 40px;
+
+}
+
+.lojasOnline h2 {
+    color: var(--cor-1);
+    font-size: large;
+    margin-bottom: 50px;
+
+}
+
+.lojasOnline span {
+    color: var(--cor-1);
+    margin-left: 20px;
+
+}
+
+.lojasOnline div {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lojasOnline img {
+    margin-left: -25px;
+}
+
+.redeSocial {
+    flex-direction: row !important;
+    margin-left: 40px;
+}
+
+.redeSocial a {
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.bottom-left {
+    margin-left: -40px;
+    margin-bottom: -20px;
+}
+
+
+.formulario {
+    background-color: var(--cor-0);
+    max-width: 53%;
+    border-radius: 6px;
+    border-bottom: var(--cor-3) solid 1px;
+    border-right: var(--cor-3) solid 1px;
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-right: 60px;
+}
+
+.formulario input,
+textarea {
+    height: 40px;
+    border-radius: 6px;
+    border: var(--cor-3) solid 1px;
+    width: 96%;
+    margin-bottom: 10px;
+
+}
+
+.formulario input:focus,
+textarea:focus {
+
+    outline: none;
+    border: var(--cor-3) solid 1px;
+    box-shadow: 0 0 0 2px #fea;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario textarea {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.halfInput {
+    display: flex;
+    flex-direction: row;
+}
+
+.halfInput input {
+    max-width: 250px;
+
+}
+
+.enviarBtn button {
+    display: inline-block;
+    padding: 16px 32px;
+    background: linear-gradient(#ffbf00, #f2a50c);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    color: var(--cor-p5);
+    font: 600 1.125rem/1.35 "Poppins", sans-serif;
+    max-width: max-content;
+    border: none;
+    cursor: pointer;
+}
+
+.enviarBtn img {
+    display: flex;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 540px;
+    padding-top: 20px;
+
+}
+
+.text-yellow {
+    color: #ffbf00;
+}
+
+.stores
+
+.storeH2 h2 {
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 560px;
+    margin-left: 80px;
+    margin-right: -40px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+.contatoLocal {
+    display: flex;
+}
+
+.contatoLocal div {
+    margin-right: 100px;
+    margin-bottom: 40px;
+}
+
+.footer {
+    display: flex;
+    color: var(--cor-1);
+    margin-top: 40px;
+    padding-left: 40px;
+
+}
+
+.footer a,
+li {
+    color: var(--cor-5) !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer img {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.contatoList {
+    border-bottom: var(--cor-11) solid 1px !important;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.copyFooter h6 {
+    color: var(--cor-5);
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .top-page-left {
+        color: var(--cor-1);
+        background-color: var(--cor-11);
+        margin-left: 20px;
+    }
+
+    .top-page-right img {
+        width: 50px;
+        height: 50px;
+        margin-top: -130px;
+        margin-right: -80px;
+    }
+
+    .contact {
+        flex-direction: column;
+        margin-left: 20px;
+        
+    }
+
+    .lojasOnline {
+
+        max-width: 80%;
+        padding-top: 50px;
+        padding-left: 10px;
+        border-radius: 6px;
+        padding-bottom: 40px;
+
+    }
+
+    .bottom-left {
+
+        padding-left: 40px;
+    }
+
+    .enviarBtn button {
+        display: inline-block;
+        padding: 11px 27px;
+        background: linear-gradient(#ffbf00, #f2a50c);
+        border-radius: 4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+        color: var(--cor-p5);
+        font: 600 1.125rem/1.15 "Poppins", sans-serif;
+        max-width: max-content;
+        border: none;
+        cursor: pointer;
+    }
+
+    .formulario {
+        max-width: 95%;
+        margin-left: -20px;
+        padding-left: 20px;
+
+    }
+
+    .formulario input,
+    textarea {        
+        width: 100%;       
+        
+    }
+
+    .formulario img{
+        padding-left: 180px;
+    }
+
+    .halfInput {
+        flex-direction: column;
+    }
+
+    .halfInput input {
+        width: 100%;
+    }
+
+    .stores{
+        flex-direction: column;            
+    }
+
+    .card {
+        margin-left: 0px;
+        width: 320px;
+    }
+
+    .card p{
+        font-size: smaller;
+        width: 120px;
+        padding-right: 0px;
+    }
+
+    .contatoLocal div{
+        margin-right: 10px;
+    }
+
+    .footer {
+        background-color: black !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer h3{
+        margin-bottom: -25px;
+
+    }
+
+    .logoFooter{
+        margin-bottom: 30px;
+        
+    }
+
+    .contatoList {
+        margin-top: 40px;
+    }
+
+    .contatoList{
+        width: 300px;
+    }
+    .socialMidiaFooter {
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    .copyFooter{
+        margin-bottom: 400px;
+    }
+
+        
+    }
