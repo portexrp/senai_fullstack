@@ -1,0 +1,368 @@
+:root {
+    --black: #000;
+    --text-1: #fff;
+    --text-2: #b2b2b2;
+    --btn-background-color-1: #FBB803;
+    --btn-background-hover-1: #dda201;
+    --btn-color-1: #000;
+    --cor-0: #ffffff;
+    --cor-1: #f7f7f7;
+    --cor-2: #ededed;
+    --cor-3: #dedede;
+    --cor-4: #cccccc;
+    --cor-5: #b2b2b2;
+    --cor-6: #9c9c9c;
+    --cor-7: #717171;
+    --cor-8: #595959;
+    --cor-9: #404040;
+    --cor-10: #2e2e2e;
+    --cor-11: #111111;
+    --cor-12: #000000;
+    --cor-p1: #ffbb00;
+    --cor-p2: #e4a30b;
+    --cor-p3: #a66f00;
+    --cor-p4: #664400;
+    --cor-p5: #332200;
+    --font-1-xl: 600 2rem/1.25 "Poppins", sans-serif;
+    --font-2-xl: 500 2rem/1.25 "Roboto", sans-serif;
+    --font-1-xxl: 600 4rem/1.125 "Poppins", sans-serif;
+
+}
+
+* {
+    
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(var(--cor-11) 330px, var(--cor-1) 0px);    
+    
+    box-sizing: border-box !important;
+}
+
+nav {
+    background-color: var(--black);
+    padding-top: 26px !important;
+    padding-bottom: 20px !important;
+    
+}
+
+nav a {
+    color: var(--cor-1) !important;
+    font-weight: 600 !important;
+}
+
+nav ul {
+    margin-right: 80px;
+}
+
+nav img {
+    margin-left: 82px;
+}
+
+
+.top-page-left {
+    color: var(--cor-1);
+    background-color: var(--cor-11);
+    margin-left: 80px;
+    margin-bottom: 80px;
+}
+
+.top-page-left span {
+    color: var(--btn-background-color-1);
+}
+
+.top-page-left h6 {
+    margin-top: 75px;
+    color: var(--cor-5);
+    font-weight: 600;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    font-size: 1.425rem;
+}
+
+.top-page-left h1 {
+    font: 600 4rem/1.125 "Poppins", sans-serif;
+
+}
+
+.top-page-right {
+    display: flex;
+    justify-content: end;
+    padding-right: 100px;
+    background-color: var(--cor-11);
+    margin-bottom: 80px;
+}
+
+.top-page-right img {
+    width: 50px;
+    height: 50px;
+    margin-top: 80px;
+}
+
+.bicicleta {
+    margin-bottom: 80px;    
+}
+
+
+.imgBicicleta{
+    margin-left: 80px;
+}
+
+
+.imgBicicleta img{    
+    max-width: 600px;
+} 
+
+.dadosBicicleta{        
+    max-width:  550px;    
+    
+}
+
+.dadosBicicleta h2 {
+    font: 600 2rem/1.25 "Poppins", sans-serif;
+}
+
+.dadosBicicleta h2::before {
+    content: '';
+    display: block;
+    background-color: var(--cor-p1);
+    width: 12px;
+    height: 8px;
+    margin-bottom: -8px;
+
+}
+
+.dadosBicicleta h2::after {
+    content: '';
+    display: inline-block;
+    background-image: url('../img/top-right.svg');
+    background-repeat: no-repeat;
+    margin-left: 250px;
+    position:initial;
+    width: 50px;
+    height: 50px;
+}
+
+
+.dadosBicicleta span{
+    font: 400 1rem/1.5 "Roboto", sans-serif;
+    color: var(--cor-8);    
+}
+
+.opcionais {
+    margin-top: 20px ;
+    width: 200px;
+    
+}
+.opcionais img {
+    width: 25px;
+    margin-right: 5px;
+}
+
+.dadosBicicleta p {
+    font: 400 1.125rem/1.35 "Poppins", sans-serif;
+    color: var(--cor-8);
+
+}
+
+
+.detalhesBtn a {    
+    padding: 16px 32px;
+    background: linear-gradient(#ffbf00, #f2a50c);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    color: var(--cor-p5);
+    font: 600 1.125rem/1.35 "Poppins", sans-serif;
+    max-width: max-content;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: -50px;
+    margin-right: 30px;
+    
+}
+
+.detalhesBtn a::after {    
+    content: '';
+    display: inline-block;
+    background: url(../img/bicletasvg/seta.svg);
+    width: 18px;
+    height: 10px;
+    margin-left: 12px;
+    transition: transform 0.2s;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: transform;
+}
+
+.bicicletaBackground {
+    padding-top: 40px;
+    height: 450px;
+    background: linear-gradient(to left, var(--cor-11) 950px, var(--cor-1) 0px);    
+}
+
+.text-yellow {
+    color: #ffbf00;
+}
+
+.footer {
+    display: flex;
+    color: var(--cor-1);
+    margin-top: 40px;
+    padding-left: 40px;
+}
+
+.footer a,
+li {
+    color: var(--cor-5) !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer img {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.contatoList {
+    border-bottom: var(--cor-11) solid 1px !important;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.copyFooter h6 {
+    color: var(--cor-5);
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .top-page-left {
+        color: var(--cor-1);
+        background-color: var(--cor-11);
+        margin-left: 20px;
+    }
+
+    .top-page-right img {
+        width: 50px;
+        height: 50px;
+        margin-top: -130px;
+        margin-right: -80px;
+    }
+
+    .contact {
+        flex-direction: column;
+        margin-left: 20px;
+        
+    }
+
+    .lojasOnline {
+
+        max-width: 80%;
+        padding-top: 50px;
+        padding-left: 10px;
+        border-radius: 6px;
+        padding-bottom: 40px;
+
+    }
+
+    .bottom-left {
+
+        padding-left: 40px;
+    }
+
+    .enviarBtn button {
+        display: inline-block;
+        padding: 11px 27px;
+        background: linear-gradient(#ffbf00, #f2a50c);
+        border-radius: 4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+        color: var(--cor-p5);
+        font: 600 1.125rem/1.15 "Poppins", sans-serif;
+        max-width: max-content;
+        border: none;
+        cursor: pointer;
+    }
+
+    .formulario {
+        max-width: 95%;
+        margin-left: -20px;
+        padding-left: 20px;
+
+    }
+
+    .formulario input,
+    textarea {        
+        width: 100%;       
+        
+    }
+
+    .formulario img{
+        padding-left: 180px;
+    }
+
+    .halfInput {
+        flex-direction: column;
+    }
+
+    .halfInput input {
+        width: 100%;
+    }
+
+    .stores{
+        flex-direction: column;            
+    }
+
+    .card {
+        margin-left: 0px;
+        width: 320px;
+    }
+
+    .card p{
+        font-size: smaller;
+        width: 120px;
+        padding-right: 0px;
+    }
+
+    .contatoLocal div{
+        margin-right: 10px;
+    }
+
+    .footer {
+        background-color: black !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer h3{
+        margin-bottom: -25px;
+
+    }
+
+    .logoFooter{
+        margin-bottom: 30px;
+        
+    }
+
+    .contatoList {
+        margin-top: 40px;
+    }
+
+    .contatoList{
+        width: 300px;
+    }
+    .socialMidiaFooter {
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    .copyFooter{
+        margin-bottom: 400px;
+    }
+
+        
+    }
