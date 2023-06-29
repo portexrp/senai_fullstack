@@ -1,0 +1,17 @@
+.navbar {
+    text-align: right;
+}
+
+.navbar img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 5px;
+    margin-top: 50px;
+}

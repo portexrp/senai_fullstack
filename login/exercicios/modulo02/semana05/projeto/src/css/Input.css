@@ -1,0 +1,19 @@
+.InputSearch {  
+    
+    width: 500px;
+    position: relative;    
+}
+
+.InputSearch input {  
+    
+    width: 450px;     
+    height: 40px;      
+    opacity: 0.7;
+    font-size: medium;
+    border-radius: 10px;
+    margin-left: 430px;
+    padding-left: 20px;
+    border: none;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2) ;
+    
+}
